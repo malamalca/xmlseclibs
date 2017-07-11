@@ -123,7 +123,7 @@ class XMLSecurityDSig
     /**
      * Reset the XPathObj to null
      */
-    private function resetXPathObj()
+    public function resetXPathObj()
     {
         $this->xPathCtx = null;
     }
@@ -133,7 +133,7 @@ class XMLSecurityDSig
      *
      * @return DOMXPath|null
      */
-    private function getXPathObj()
+    public function getXPathObj()
     {
         if (empty($this->xPathCtx) && ! empty($this->sigNode)) {
             $xpath = new DOMXPath($this->sigNode->ownerDocument);
